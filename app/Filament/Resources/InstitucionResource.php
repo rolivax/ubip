@@ -35,6 +35,7 @@ class InstitucionResource extends Resource
                     Forms\Components\TextInput::make('nombre_institucion')
                         ->required()
                         ->unique(ignoreRecord: true)
+                        ->columnSpanFull()
                         ->maxLength(100),
                     Forms\Components\TextInput::make('codigo')
                         ->required()

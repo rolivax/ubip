@@ -19,8 +19,7 @@ class RubroResource extends Resource
 {
     protected static ?string $model = Rubro::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationIcon = 'heroicon-o-archive-box';
     protected static ?string $modelLabel = 'Rubro';
     protected static ?string $pluralModelLabel = 'Rubros';
     protected static ?string $navigationGroup = 'Administración';

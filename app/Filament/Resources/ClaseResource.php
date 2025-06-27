@@ -19,7 +19,7 @@ class ClaseResource extends Resource
 {
     protected static ?string $model = Clase::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-adjustments-horizontal';
 
     protected static ?string $modelLabel = 'Clase';
     protected static ?string $pluralModelLabel = 'Clases';

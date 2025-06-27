@@ -41,6 +41,8 @@ class EspecificoResource extends Resource
                         ->unique(ignoreRecord: true)
                         ->maxLength(10),
                     Forms\Components\TextInput::make('cuenta_contable')
+                        ->required()
+                        ->unique(ignoreRecord: true)
                         ->maxLength(25),
 
                     Forms\Components\Toggle::make('activo')
