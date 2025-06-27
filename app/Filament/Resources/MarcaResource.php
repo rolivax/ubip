@@ -6,6 +6,7 @@ use App\Filament\Resources\MarcaResource\Pages;
 use App\Filament\Resources\MarcaResource\RelationManagers;
 use App\Models\Marca;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -29,14 +30,17 @@ class MarcaResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('nombre_marca')
-                    ->required()
-                    ->unique(ignoreRecord: true)
-                    ->maxLength(100),
+                Section::make()->schema([
+                    Forms\Components\TextInput::make('nombre_marca')
+                        ->required()
+                        ->unique(ignoreRecord: true)
+                        ->maxLength(100),
 
-                Forms\Components\Toggle::make('activo')
-                    ->required()
-                    ->default(true),
+                    Forms\Components\Toggle::make('activo')
+                        ->required()
+                        ->default(true),
+                ])
+                    ->columns(2),
             ]);
     }
 
